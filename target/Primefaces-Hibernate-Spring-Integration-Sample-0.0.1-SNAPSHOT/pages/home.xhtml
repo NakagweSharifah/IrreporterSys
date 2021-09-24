@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+</h:head>
+
+
+<h:body>
+    <p:card style="width: 25rem; margin-bottom: 2em">
+        <f:facet name="title">
+            WELCOME TO TAIBAH INTERNATIONAL SCHOOL
+        </f:facet>
+
+        <p>Taibah teaches social values and trains children to prepare for the a great life time</p>
+
+        <p:linkButton outcome="employeesView.xhtml" value="Employee" style="margin-right:20px;">
+            <f:param name="employeeId" value="10"/>
+        </p:linkButton>
+        <p:linkButton outcome="trial.xhtml" value="Student" style="margin-right:20px;">
+            <f:param name="studentId" value="10"/>
+        </p:linkButton>
+
+
+    </p:card>
+</h:body>
+</html>
