@@ -11,8 +11,8 @@
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="hibernate.connection.url">jdbc:mysql://localhost/irreporter</property>
         
-        <property name="connection.username">pahappa</property>
-        <property name="connection.password">pass@2020@Pahappa</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">p@ss1234</property>
         
          <!-- Enable SQL logging-->
         <property name="show_sql">true</property>
@@ -22,6 +22,7 @@
 
         <!-- SQL dialect -->
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
         
         <!-- Enable Hibernate's automatic session context management -->
         <property name="current_session_context_class">thread</property>
@@ -30,9 +31,10 @@
         <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
 
         <!-- Specifying Session Context -->
-        <property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>
+<!--        <property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>-->
 
         <!-- Mapping With Model Classes Containing Annotations -->
+        <mapping class="com.irreporter.models.Incident"/>
 
     </session-factory>
 

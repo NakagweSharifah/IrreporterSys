@@ -1,0 +1,49 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <script name="jquery/jquery.js" library="primefaces"></script>
+    <title>iReporter Redflag Incidents</title>
+</h:head>
+<body>
+<div class="card">
+    <h1>Redflag Incidents</h1>
+    <h:form>
+        <div class="card">
+            <p:linkButton outcome="menu.xhtml" value="Back to Menu" styleClass="p-mr-2">
+                <f:param name="homeId" value="15"/>
+            </p:linkButton>
+            <p:dataTable var="redflagIncident" value="#{incidentsView.redflagIncidents}">
+                <p:column headerText="Code" style="color: blue">
+                    <h:outputText value="#{redflagIncident.id}" />
+                </p:column>
+
+                <p:column headerText="Title" style="color: blue">
+                    <h:outputText value="#{redflagIncident.title}" />
+                </p:column>
+
+                <p:column headerText="Type" style="color: blue">
+                    <h:outputText value="#{redflagIncident.type}" />
+                </p:column>
+
+                <p:column headerText="Comment" style="color: blue">
+                    <h:outputText value="#{redflagIncident.comment}" />
+                </p:column>
+
+                <p:column headerText="Status" style="color: blue">
+                    <h:outputText value="#{redflagIncident.status}" />
+                </p:column>
+
+                <p:column headerText="Created On" style="color: blue">
+                    <h:outputText value="#{redflagIncident.createdOn}" />
+                </p:column>
+            </p:dataTable>
+        </div>
+
+    </h:form>
+
+</div>
+</body>
+</html>

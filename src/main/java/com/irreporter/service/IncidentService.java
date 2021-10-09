@@ -2,9 +2,10 @@
 
 package com.irreporter.service;
 
-import com.irreporter.models.Incident;
+
 import com.irreporter.exceptions.SavingFailedException;
 import com.irreporter.exceptions.ValidationFailedException;
+import com.irreporter.models.Incident;
 
 import java.util.List;
 
@@ -19,9 +20,8 @@ public interface IncidentService {
 	 * 
 	 * @param activity
 	 * @throws Exception
-	 * @return
-	 */
-	Incident saveIncident(Incident incident) throws Exception;
+     */
+	void saveIncident(Incident incident) throws Exception;
 
 	/**
 	 * Updates an {@link Incident}. An incident must have an id, title, type, status and comment.
@@ -85,4 +85,6 @@ public interface IncidentService {
 	 * @param incident
 	 */
 	void deleteIncident(Incident incident);
+
+	void save(Incident incident);
 }

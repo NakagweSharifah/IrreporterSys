@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <style>
+        .body_content{
+            background-image: url("#{resource['images:ir_image.jpg']}");
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <script name="jquery/jquery.js" library="primefaces"></script>
+    <title>View al saved incidents</title>
+</h:head>
+
+<h:body styleClass="body_content">
+<div class="card">
+    <p:linkButton outcome="menu.xhtml" value="MENU" styleClass="p-mr-2">
+        <f:param name="menuId" value="20"/>
+    </p:linkButton>
+    <h1>All Incidents</h1>
+    <h:form>
+        <div class="card">
+            <p:dataTable var="inc" value="#{incidentsView.incidents}" style="color: darkgray">
+                <p:column headerText="Code" style="color: red">
+                    <h:outputText value="#{inc.id}" />
+                </p:column>
+
+                <p:column headerText="Title" style="color: red">
+                    <h:outputText value="#{inc.title}" />
+                </p:column>
+
+                <p:column headerText="Type" style="color: red">
+                    <h:outputText value="#{inc.type}" />
+                </p:column>
+
+                <p:column headerText="Comment" style="color: red">
+                    <h:outputText value="#{inc.comment}" />
+                </p:column>
+
+<!--                <p:column headerText="Status">-->
+<!--                    <h:outputText value="#{inc.status}" />-->
+<!--                </p:column>-->
+
+            </p:dataTable>
+        </div>
+    </h:form>
+</div>
+</h:body>
+</html>

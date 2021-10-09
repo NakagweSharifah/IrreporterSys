@@ -29,6 +29,6 @@
         <listener-class>com.sun.faces.config.ConfigureListener</listener-class>
     </listener>
     <welcome-file-list>
-        <welcome-file>pages/incidentsView.xhtml</welcome-file>
+        <welcome-file>pages/menu.xhtml</welcome-file>
     </welcome-file-list>
 </web-app>

@@ -4,34 +4,50 @@
       xmlns:p="http://primefaces.org/ui">
 
 <h:head>
+    <style>
+        .body_content{
+            background-image: url("#{resource['images:ir_image.jpg']}");
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+    </style>
 </h:head>
+<h:body styleClass="body_content">
 
-<h:body>
-    <p:card style="width: 70rem; margin-bottom: 90em">
-        <f:facet name="title">
+
+        <h1>
             WELCOME TO IREPORTER
-        </f:facet>
+        </h1>
+        <p:card style="width: 30em; margin-left: 30%">
 
-        <p> Corruption is a huge bane to Africa’s development.
+
+        <p style="font-family: 'Algerian' "> DESCRIPTION</p>
+            <p style="font-family: 'Cambria'">Corruption is a huge bane to Africa’s development.
             African countries must develop novel and localised
             solutions that will curb this menace, hence the birth
             of iReporter. iReporter enables any/every citizen to
             bring any form of corruption to the notice of appropriate
             authorities and the general public. Users can also
             report on things that needs … </p>
+            <br/><br/>
+            <h:form>
+                <p:messages id="messages" showDetail="true" closable="true">
+                    <p:autoUpdate/>
+                </p:messages>
+                <h5 class="p-mt-0">CLICK BUTTON</h5>
 
-        <p:linkButton outcome="loginView.xhtml" value="login" style="margin-right:20px;">
-            <f:param name="loginId" value="15"/>
-        </p:linkButton>
-        <p:linkButton outcome="registerView.xhtml" value="Register" style="margin-right:20px;">
-            <f:param name="registerId" value="15"/>
-        </p:linkButton>
+                <p:linkButton outcome="menu.xhtml" value="MENU" styleClass="p-mr-2">
+                    <f:param name="menuId" value="20"/>
+                </p:linkButton>
+            </h:form>
+
+
+        </p:card>
 
 
 
 
-
-    </p:card>
 
 </h:body>
 </html>

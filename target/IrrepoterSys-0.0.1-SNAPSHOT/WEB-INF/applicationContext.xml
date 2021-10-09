@@ -19,9 +19,9 @@
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/taibah" />
-		<property name="username" value="pahappa" />
-		<property name="password" value="pass@2020@Pahappa" />
+		<property name="url" value="jdbc:mysql://localhost:3306/irreporter" />
+		<property name="username" value="root" />
+		<property name="password" value="p@ss1234" />
 	</bean>
 	<!-- Define SessionFactory bean -->
 	<bean id="sessionFactory"
